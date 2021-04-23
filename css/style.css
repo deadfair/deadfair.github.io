@@ -467,8 +467,77 @@ z-index: 2;
   color: var(--szin1);
   background: none;
 }
+/*portfólió--------------------------------------------------------------------------------*/
 
+.portfolio .title::after{
+    content: "Projektjeim";
+}
+.portfolio .carousel .card{
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+.portfolio .max-width .carousel a .card .box .text{
+    color:var(--szin2);
+}
+.portfolio .max-width .carousel a .card .box p{
+    color:var(--szin2);
+}
 
+.portfolio .carousel .card:hover{
+    background: var(--szin1);
+}
+.portfolio .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    height: 310px;
+}
+.portfolio .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+.portfolio .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.portfolio .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 5px solid var(--szin1);
+    transition: all 0.5s ease;
+}
+.portfolio .carousel .card:hover img{
+    border-color: var(--szin2);
+}
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid var(--szin1)!important;
+    transition: all 0.5s ease;
+}
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+    background: var(--szin1)!important;
+}
 /*mediaq--------------------------------------------------------------------------------*/
 @media(max-width:1290px){
 .max-width{
@@ -733,75 +802,7 @@ z-index: 2;
 
 
 
-.portfolio .title::after{
-    content: "Projektjeim";
-}
-.portfolio .carousel .card{
-    background: #222;
-    border-radius: 6px;
-    padding: 25px 35px;
-    text-align: center;
-    overflow: hidden;
-    transition: all 0.5s ease;
-}
-.portfolio .max-width .carousel a .card .box .text{
-    color:var(--szin2);
-}
-.portfolio .max-width .carousel a .card .box p{
-    color:var(--szin2);
-}
 
-.portfolio .carousel .card:hover{
-    background: var(--szin1);
-}
-.portfolio .carousel .card .box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.5s ease;
-    height: 310px;
-}
-.portfolio .carousel .card:hover .box{
-    transform: scale(1.05);
-}
-.portfolio .carousel .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-}
-.portfolio .carousel .card img{
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    border-radius: 6px;
-    border: 5px solid var(--szin1);
-    transition: all 0.5s ease;
-}
-.portfolio .carousel .card:hover img{
-    border-color: var(--szin2);
-}
-.owl-dots{
-    text-align: center;
-    margin-top: 20px;
-}
-.owl-dot{
-    height: 13px;
-    width: 13px;
-    margin: 0 5px;
-    outline: none!important;
-    border-radius: 50%;
-    border: 2px solid var(--szin1)!important;
-    transition: all 0.5s ease;
-}
-.owl-dot.active{
-    width: 35px;
-    border-radius: 14px;
-}
-.owl-dot.active,
-.owl-dot:hover{
-    background: var(--szin1)!important;
-}
 
 
 
