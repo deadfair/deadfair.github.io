@@ -28,14 +28,14 @@ top:12%;
 left:calc(100% - 263px);
 }
 .star-3 .elso, .star-3 .masodik, .star-3 .harmadik, .star-3 .negyedik{
-animation-delay: 0.4s ;
+animation-delay: 2.4s ;
 }
 .star-4{
     top:13.5%;
     left:calc(100% - 345px);
 }
     .star-4 .elso, .star-4 .masodik, .star-4 .harmadik, .star-4 .negyedik{
-    animation-delay: 0.1s ;
+    animation-delay: 1.2s ;
 }
 .star-5{
     top:10%;
@@ -58,7 +58,7 @@ animation-delay: 0.8s ;
     left:calc(100% - 431px);
 }
 .star-7 .elso, .star-7 .masodik, .star-7 .harmadik, .star-7 .negyedik{
-animation-delay: 0.7s ;
+animation-delay: 2s ;
 }
 
 @media (max-width:500px) {
