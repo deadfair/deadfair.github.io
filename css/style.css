@@ -528,11 +528,11 @@ z-index: 2;
     border-color: var(--szin2);
 }
 
-.portfolio .max-width .carousel .owl-dots{
+.owl-dots{
     text-align: center;
     margin-top: 20px;
 }
-.portfolio .max-width .carousel .owl-dot{
+.owl-dot{
     height: 13px;
     width: 13px;
     margin: 0 5px;
@@ -541,12 +541,12 @@ z-index: 2;
     border: 2px solid var(--szin1)!important;
     transition: all 0.5s ease;
 }
-.portfolio .max-width .carousel .owl-dot.active{
+.owl-dot.active{
     width: 35px;
     border-radius: 14px;
 }
-.portfolio .max-width .carousel .owl-dot.active,
-.portfolio .max-width .carousel .owl-dot:hover{
+.owl-dot.active,
+.owl-dot:hover{
     background: var(--szin1)!important;
 }
 
@@ -680,6 +680,7 @@ z-index: 2;
     content: "\f00d";
 }
 .navbar .menu{
+    display: none;
     position: fixed;
     height: 100vh;
     width: 100%;
@@ -692,7 +693,7 @@ z-index: 2;
     transition: all 0.2s linear;
 }
 .navbar .menu.active{
-
+    display: block;
     opacity: 1;
 }
 .navbar .menu li{
