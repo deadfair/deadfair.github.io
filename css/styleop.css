@@ -135,18 +135,10 @@ left:calc(100% - 381px);
     width:100%;
     padding:0;
 }
-.relativ-maker{
-    top:0;
-    left:0;
-    height:100vh;
-    width:100%;
-    display:flex;
-    flex-direction: row;
-    position:relative;
-    justify-content: center;
-}
+
 .night{
-    position: absolute;
+    display:block;
+    margin:auto;
     height:100%;
     width:100%;
     overflow: hidden;
