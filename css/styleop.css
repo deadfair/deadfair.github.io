@@ -127,13 +127,30 @@ left:calc(100% - 381px);
 
 
 /* ------csillagoklogika-------------------------------------------------------------------------------------------*/
-.night{
+.animation{
     position: absolute;
+    left:0;
+    top:0;
+    height:100vh;
+    width:100%;
+    padding:0;
+}
+.relativ-maker{
     top:0;
     left:0;
     height:100vh;
     width:100%;
+    display:flex;
+    flex-direction: row;
+    position:relative;
+    justify-content: center;
+}
+.night{
+    position: absolute;
+    height:100%;
+    width:100%;
     overflow: hidden;
+    max-width: 1300px;
 }
 .elso, .masodik, .harmadik, .negyedik{
     position: absolute;
