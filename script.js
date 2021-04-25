@@ -24,9 +24,9 @@ $(document).ready(()=>{
     // typing text animation script
     var typed = new Typed(".typing", {
         strings: ["Szoftverfejlesztő"],
-        typeSpeed: 100,
+        typeSpeed: 110,
         backSpeed: 60,   // visszatörlés sebessége minél kisseb annál gyors
-        loop: true       // végtelen ciklus?
+        loop: false       // végtelen ciklus?
     });
 
     var typed = new Typed(".typing-2", {

@@ -203,9 +203,6 @@ transition: color 0.3 ease;
 .home .home-content .text-3{
     font-size: 40px;
     margin: 5px 0;
-    animation: balrol 0.7s linear forwards;
-    animation-delay: 1.3s;
-    opacity: 0;
 }
 .home .home-content .text-3 span{
     color:var(--szin1);
@@ -224,9 +221,7 @@ z-index: 2;
 }
 .about .about-content .left{
     width: 40%;
-    animation: balrol 0.7s linear forwards;
-    animation-delay: 0.2s;
-    opacity: 0;
+
 }
 .about .about-content .left img{
     height: 400px;
@@ -680,7 +675,7 @@ z-index: 2;
     content: "\f00d";
 }
 .navbar .menu{
-    display: none;
+    visibility: hidden;
     position: fixed;
     height: 100vh;
     width: 100%;
@@ -693,8 +688,8 @@ z-index: 2;
     transition: all 0.2s linear;
 }
 .navbar .menu.active{
-    display: block;
     opacity: 1;
+    visibility: visible;
 }
 .navbar .menu li{
     display: block;

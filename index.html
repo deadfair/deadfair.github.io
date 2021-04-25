@@ -22,6 +22,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -37,12 +41,11 @@
             <div class="logo"><a href="#">Krisz<span>tián</span> </a></div>
             <ul class="menu">
                 <!-- ezek egyesével jöjjenek az ikonra kattintva..-->
-                <li style="--i:0.5s;"><a href="#home"     class="menu-btn " style="--i:0.1s;">Home</a></li>
-                <li style="--i:0.4s;"><a href="#about"    class="menu-btn " style="--i:0.2s;">Rólam</a></li>
-                <li style="--i:0.3s;"><a href="#skills"   class="menu-btn " style="--i:0.3s;">Tapasztalat</a></li>
-                <li style="--i:0.2s;"><a href="#portfolio"class="menu-btn " style="--i:0.4s;">Portfólió</a></li>
-                <li style="--i:0.1s;"><a href="#contact"  class="menu-btn " style="--i:0.5s;">Kapcsolat</a></li>
-                <!-- balról, alsó sarokról jobbra animálódjon-->
+                <li style="--i:1s;"><a href="#home"     class="menu-btn " style="--i:0.1s;">Home</a></li>
+                <li style="--i:0.8s;"><a href="#about"    class="menu-btn " style="--i:0.2s;">Rólam</a></li>
+                <li style="--i:0.6s;"><a href="#skills"   class="menu-btn " style="--i:0.3s;">Tapasztalat</a></li>
+                <li style="--i:0.4s;"><a href="#portfolio"class="menu-btn " style="--i:0.4s;">Portfólió</a></li>
+                <li style="--i:0.2s;"><a href="#contact"  class="menu-btn " style="--i:0.5s;">Kapcsolat</a></li>
 
             </ul>
             <div class="menu-btn">
@@ -117,7 +120,7 @@
         <div class="max-width">
             <h2 class="title">Magamról</h2>
             <div class="about-content">
-                <div class="column left">
+                <div data-aos="flip-right" class="column left">
                     <img src="images/én_1.jpeg" alt="Krisztiánról egy kép">
                 </div>
                 <div class="column right">
@@ -232,7 +235,7 @@
                 <a href="#">
                     <div class="card">
                         <div class="box">
-                            <img src="images/profile-2.jpeg" alt="">
+                            <img src="" alt="">
                             <div class="text">Project 2</div>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
@@ -241,7 +244,7 @@
                 <a href="#">
                     <div class="card">
                         <div class="box">
-                            <img src="images/profile-3.jpeg" alt="">
+                            <img src="" alt="">
                             <div class="text">Project 3</div>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
@@ -250,7 +253,7 @@
                 <a href="#">
                     <div class="card">
                         <div class="box">
-                            <img src="images/profile-4.jpeg" alt="">
+                            <img src="" alt="">
                             <div class="text">Project 4</div>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
@@ -259,7 +262,7 @@
                 <a href="#">
                     <div class="card">
                         <div class="box">
-                            <img src="images/profile-5.jpeg" alt="">
+                            <img src="" alt="">
                             <div class="text">Project 5</div>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
@@ -341,6 +344,13 @@
             </div>
         </div>
     </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset:0,
+            duration:2000,
+        });
+      </script>
     <script src="script.js"></script>
 </body>
 
