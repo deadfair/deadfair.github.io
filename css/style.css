@@ -694,11 +694,11 @@ z-index: 2;
 .navbar .menu li{
     display: block;
     transform: translateY(-120px);
-    transition: all calc(0.2s) linear  var(--i);
     opacity: 0;
 }
 .navbar .menu li.active{
     transform: translateY(0px);
+    transition: all calc(0.2s) linear  var(--i);
     opacity: 1; 
 }
 
