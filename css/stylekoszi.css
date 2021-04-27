@@ -15,7 +15,7 @@
 p{
 
     color:var(--szin1);
-    font-size: 23px;
+    font-size: 40px;
     font-weight: 500;
     font-family: 'Lobster', cursive;
     transform:translateY(calc(-13vh + 13px));
@@ -93,7 +93,11 @@ body{
 
 }
 
-
+@media (max-width: 500px){
+    body .abs .tuz p{
+        font-size: 27px;
+    }
+}
 @media (max-width: 470px){
 
 
@@ -117,7 +121,7 @@ body{
 }
 @media (max-width: 336px){
     body .abs .tuz p{
-        font-size: 17px;
+        font-size: 22px;
     }
 }
 
@@ -179,4 +183,18 @@ body{
 svg{
     width: 0;
     height:0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--szin2);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--szin1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--szin5);
 }
