@@ -73,6 +73,36 @@ body{
     height:600px;
     filter:url(#wavy) blur(1px);
 }
+
+@media (max-width: 600px){
+
+    body .tuz .circle:before{
+        top: 8vw;
+        left: 8vw;
+        right: 8vw;
+        bottom: 8vw;
+    }
+    body .tuz .circle:after{
+
+        top: 8vw;
+        left: 8vw;
+        right: 8vw;
+        bottom: 8vw;
+    }
+
+}
+
+@media (max-width: 377px){
+body .abs .tuz p{
+    font-size: 20px;
+
+}
+@media (max-width: 332px){
+    body .abs .tuz p{
+        font-size: 17px;
+    
+    }
+}
 .circle:before{
     content:'';
     position:absolute;
