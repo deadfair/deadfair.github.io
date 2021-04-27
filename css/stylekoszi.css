@@ -21,6 +21,8 @@ p{
     transform:translateY(calc(-13vh + 13px));
     text-shadow: 3px 3px 4px var(--szin1);
 }
+
+
 body a{
     position:absolute;
     top:60vh;
@@ -40,6 +42,18 @@ body a{
     transition: all 0.5s ease;
     cursor:pointer;
     z-index: 999;
+    animation: animatearnyek 2s ease-in-out infinite alternate;
+}
+@keyframes animatearnyek {
+    0%{
+        box-shadow: 2px 2px 30px 6px var(--szin1);
+
+    }
+    100%{
+        box-shadow: 1px 1px 10px 3px var(--szin1);
+
+    }
+    
 }
 
 a:hover{
