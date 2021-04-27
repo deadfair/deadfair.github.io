@@ -20,6 +20,7 @@ p{
     font-family: 'Lobster', cursive;
     transform:translateY(calc(-13vh + 13px));
     text-shadow: 3px 3px 4px var(--szin1);
+    display: block;
 }
 
 
@@ -77,6 +78,7 @@ body{
     display:flex;
     justify-content: center;
     align-items: center;
+    flex-flow: column;
 
 }
 .circle{
@@ -86,7 +88,12 @@ body{
     height:600px;
     filter:url(#wavy) blur(1px);
 }
-
+@media (max-width: 637px){
+    
+    body .abs .tuz p{
+        font-size: 34px;
+    }
+}
 @media (max-width: 600px){
     body .tuz .circle:before{
         top: calc(370px - 50vw);
@@ -133,9 +140,16 @@ body{
     }
 
 }
-@media (max-width: 336px){
+
+@media (max-width: 410px){
+    
     body .abs .tuz p{
         font-size: 22px;
+    }
+}
+@media (max-width: 330px){
+    body .abs .tuz p{
+        font-size: 17px;
     }
 }
 
