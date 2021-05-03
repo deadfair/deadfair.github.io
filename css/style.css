@@ -98,7 +98,7 @@ section .title::after{
     position:fixed;
     width: 100%;
     padding: 30px 0;
-    font-family: 'Lobster', cursive;
+    font-family: 'Lobster', sans-serif;
     transition: all 0.5s ease;
 }
 
@@ -167,7 +167,7 @@ transition: color 0.3 ease;
     height: 100vh;  /*relatív mértékegység view-ponthoz viszonyít 100vh=>100% */
     color:var(--szin2);
     min-height: 500px;
-    font-family: 'Lobster', cursive;
+    font-family: 'Lobster', sans-serif;
 }
 .home .max-width{
     width: 100%;
