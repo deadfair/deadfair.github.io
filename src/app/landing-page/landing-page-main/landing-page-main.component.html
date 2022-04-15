@@ -1,0 +1,87 @@
+<main>
+  <section #about class="container-fluid about__bcgcolor about__color">
+    <div class="container py-5">
+      <div class="text-center mb-md-5 mb-lg-0">
+        <h2 class="fs-1 fw-bold ">Magamról</h2>
+        <h3 class="fs-5 line fw-bold about__line primarycolor">Bővebben</h3>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-6 d-flex justify-content-center align-items-center ">
+          <img src="../../../assets/imgs/én_1.jpeg" alt="" class="img-fluid h-75 rounded-3 shadow-lg">
+        </div>
+        <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center ">
+          <h3 class="fs-4 fw-bold mb-4 align-self-md-start"> {{aboutText.title}}</h3>
+          <p class="">{{aboutText.text}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section #skills class="container-fluid  skills__bcgcolor skills__color">
+    <div class="container py-5">
+      <div class="text-center mb-5 mb-md-4 ">
+        <h2 class="fs-1 fw-bold ">Tapasztalat</h2>
+        <h3 class="fs-5 line fw-bold skills__line primarycolor">Ismereteim</h3>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
+          <p>
+            <span class="primarycolor fw-bold">HTML5:</span> Szemantikus markup, profi weboldalak készítése
+            akadálymentesítés, SEO barátságos szerkezet
+          </p>
+          <p>
+            <span class="primarycolor fw-bold">CSS3:</span> Profi megjelenés, modern reszponzív stílus, karbantartható
+            architektúra, Flexbox, Grid
+          </p>
+          <p>
+            <span class="primarycolor fw-bold">JavaScript(ES2020):</span> Modern, 220-as JavaScript, tiszta kód
+          </p>
+          <p>
+            <span class="primarycolor fw-bold">TypeScript:</span> Objektum orientált programozás
+          </p>
+          <p>
+            <span class="primarycolor fw-bold">Angular:</span> komplex webalkalmazások fejlesztése
+          </p>
+          <p>
+            <span class="primarycolor fw-bold">NoSQL:</span> firebase, firestore-ban szerzett gyakorlat
+          </p>
+        </div>
+        <div class="col-12 col-md-6">
+          <div *ngFor="let skill of skillsArr">
+            <p class="mb-1 mt-3">{{skill.text}}</p>
+            <div class="progress">
+              <div class="progress-bar"
+                role="progressbar"
+                [ngStyle]="{'width': skill.value + '%'}"
+                attr.aria-valuenow="{{skill.value}}"
+                aria-valuemin="0"
+                aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section #works class="container-fluid  works__bcgcolor">
+    <div class="container py-5">
+      <div class="text-center  mb-5">
+        <h2 class="fs-1 fw-bold works__color">Munkáim</h2>
+        <h3 class="fs-5 line fw-bold works__line primarycolor">Projektjeim</h3>
+      </div>
+      <div class="d-flex flex-wrap justify-content-center">
+        <div *ngFor="let project of projects"
+          (click)="navigateTo(project.url)"
+          class="d-flex justify-content-center mb-5 mx-2 mx-md-4 pointer">
+          <div class="card rounded-3 shadow-lg" style="width: 15rem;">
+            <a>
+              <img [src]=project.imgSrc class="card-img-top img--size" [alt]=project.text>
+            </a>
+            <div class="card-body">
+              <h5 class="card-title text-center">{{project.text}}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

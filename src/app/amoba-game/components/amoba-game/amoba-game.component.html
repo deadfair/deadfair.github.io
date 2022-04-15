@@ -1,0 +1,94 @@
+<nav class="navbar sticky-top navbar-expand-md navbar-dark ">
+  <div class="container-fluid ">
+    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center text-center" id="navbarSupportedContent">
+      <ul class="navbar-nav fs-5 ">
+        <li class="nav-item">
+          <a class="nav-link text-white restart" (click)="restart()" role="button">Restart</a>
+        </li>
+        <li class="nav-item" *ngFor="let playerHoverFlag of playerHoverFlags">
+          <a class="nav-link " role="button">
+            <span [ngClass]="{'iconhover':playerHoverFlag.plus || playerHoverFlag.minus || playerHoverFlag.shuffle}">
+              {{playerHoverFlag.text}}
+            </span>
+            <fa-icon class="mx-1 text-white"
+              (click)="plus(playerHoverFlag)"
+              (pointermove)="playerHoverFlag.plus=true"
+              (pointerleave)="playerHoverFlag.plus=false"
+              [ngClass]="{'iconhover':playerHoverFlag.plus}"
+              [icon]="icons.plus">
+            </fa-icon>
+            <fa-icon class="mx-1 text-white"
+              (click)="minus(playerHoverFlag)"
+              (pointermove)="playerHoverFlag.minus=true"
+              (pointerleave)="playerHoverFlag.minus=false"
+              [ngClass]="{'iconhover':playerHoverFlag.minus}"
+              [icon]="icons.minus">
+            </fa-icon>
+            <fa-icon *ngIf="playerHoverFlag.shuffle!==undefined"
+              class="mx-1 text-white"
+              (click)="shuffle(playerHoverFlag)"
+              (pointermove)="playerHoverFlag.shuffle=true"
+              (pointerleave)="playerHoverFlag.shuffle=false"
+              [ngClass]="{'iconhover':playerHoverFlag.shuffle}"
+              [icon]="icons.shuffle">
+            </fa-icon>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container-fluid px-0 py-4 min-vh-100 h-100">
+  <div class="row m-0 text-center ">
+    <h1 class="fw-bold" >AMŐBA<span style="color:red">KING</span></h1>
+  </div>
+  <div class="row mt-2 mb-4 my-sm-0 m-0">
+    <div class="col-12 col-sm-6 p-0 player"  >
+      <div class="d-flex h-100  justify-content-sm-end align-items-center justify-content-center ">
+          <p class="m-0 fs-5 player__text">Next Player:</p>
+          <div class="d-flex justify-content-center player__icon">
+          <fa-icon [ngStyle]="{'color':nextPlayer.color}" *ngIf="nextPlayer" [icon]="nextPlayer.sign">
+          </fa-icon>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 p-0 player" >
+      <div class="d-flex justify-content-sm-start h-100 align-items-center  justify-content-center">
+          <p class="m-0 fs-5 player__text">Winner Player:</p>
+          <div class="d-flex justify-content-center player__icon">
+            <fa-icon [ngStyle]="{'color':winnerPlayer.color}" *ngIf="winnerPlayer" [icon]="winnerPlayer.sign">
+            </fa-icon>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="row m-0">
+    <app-amoba-canvas class="p-0"
+    [x]=x [y]=y
+    [restartEmitter]="restartEmitter">
+    </app-amoba-canvas>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div *ngFor="let currentPlayer of currentPlayers,index as i" class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div  class="card m-2 p-1 shadow-sm">
+          <div class="card-body text-center p-1">
+            <h5 class="card-title ">Player {{i+1}}</h5>
+            <fa-icon
+              class="card__icon"
+              [ngStyle]="{'color':currentPlayer.color}"
+              [icon]="currentPlayer.sign">
+            </fa-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>

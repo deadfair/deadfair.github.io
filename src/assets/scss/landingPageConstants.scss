@@ -1,0 +1,56 @@
+$primaryColorLandingPage : #e67103;
+$secondaryColorLandingPage: #000000;
+$thirdColorLandingPage: #ffffff;
+$fourthColorLandingPage: #888;
+
+
+
+@mixin beforeAfterLine($offset:5rem,$color:$thirdColorLandingPage){
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.5rem;
+    height: .17rem;
+    background: $color;
+    transform: translateX(0 - $offset );
+  }
+  &::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.5rem;
+    height: .17rem;
+    background: $color;
+    transform: translateX($offset - 1.5rem);
+  }
+}
+
+@mixin btnLandingPage($primaryColor:$primaryColorLandingPage,$secondaryColor:$thirdColorLandingPage) {
+  transition: all 0.5s ease;
+  color:$secondaryColor;
+  background-color:$primaryColor;
+  border-color: $primaryColor;
+  border-radius:1rem;
+  width:7rem;
+  &:hover{
+    background:none;
+    color:$primaryColor
+  }
+}
+
+
+@mixin line_color_bcgcolor($offset,$color,$bcgColor){
+  &__line{
+    @include beforeAfterLine($offset,$color);
+  }
+  &__color{
+    color:$color;
+  }
+  &__bcgcolor{
+    background-color:$bcgColor;
+  }
+}

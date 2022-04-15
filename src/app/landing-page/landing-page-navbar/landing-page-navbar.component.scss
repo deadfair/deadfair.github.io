@@ -1,0 +1,16 @@
+@use "../../../assets/scss/landingPageConstants.scss" as c;
+
+$primaryColor:c.$primaryColorLandingPage;
+$secondaryColor:c.$thirdColorLandingPage;
+
+.navbar-light{
+  background-color:$primaryColor;
+  .navbar-toggler{
+    background-color:$primaryColor;
+    color:$secondaryColor;
+  }
+  a{
+    color:$secondaryColor;
+    cursor: pointer;
+  }
+}

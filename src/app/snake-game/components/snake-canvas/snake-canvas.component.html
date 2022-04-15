@@ -1,0 +1,11 @@
+<div class="row px-1 px-lg-5 mt-2 position-relative">
+  <div [ngClass]="{'d-block':gameIsOver,'d-none':!gameIsOver}"
+      class="gameover h-100 w-100 fw-bold m-0 px-1 px-lg-5">
+    <div class="h-100 w-100  px-0">
+      <div class="gameover__text h-100 w-100 d-flex justify-content-center align-items-center">
+        Game Over
+      </div>
+    </div>
+  </div>
+  <canvas #canvas class="px-0 py-0  canvas rounded-1" id="canvas"></canvas>
+</div>

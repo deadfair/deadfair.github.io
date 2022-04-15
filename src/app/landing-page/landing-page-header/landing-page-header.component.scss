@@ -1,0 +1,21 @@
+
+@use '../../../assets/scss/landingPageConstants.scss' as c;
+
+$primaryColor:c.$primaryColorLandingPage;
+$secondaryColor:c.$secondaryColorLandingPage;
+$thirdColor:c.$thirdColorLandingPage;
+
+.container-fluid{
+  background-color:$secondaryColor
+}
+
+.container {
+  height: 95vh;
+}
+
+h1{
+  color: $thirdColor;
+  span{
+    color: $primaryColor
+  }
+}

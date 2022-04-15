@@ -1,0 +1,61 @@
+
+main{
+  background: rgb(204, 204, 204);
+  .player{
+    height:6rem;
+      &__icon{
+        width:6rem;
+        fa-icon{
+          font-size: 3rem
+        }
+      }
+    @media (max-width: 575.98px) {
+      height:3rem;
+
+      &__icon{
+        width:4rem;
+        fa-icon{
+          font-size: 2rem;
+        }
+      }
+    }
+    @media (max-width: 363px) {
+      height:2.2rem;
+      &__text{
+        font-size: 1.1rem !important;
+      }
+      &__icon{
+        width:2rem;
+        fa-icon{
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+nav{
+  a {
+    &:hover{
+      color:rgba(255,255,255,.55) !important;
+    }
+  }
+
+  background: rgb(54, 54, 54) !important;
+  .dropdown-item.active, .dropdown-item:active{
+    background-color:#363636
+  }
+  .iconhover{
+    color: red !important;
+  }
+  .restart{
+    &:hover{
+      color: red !important
+    }
+  }
+}
+.card{
+  background: rgb(187, 187, 187);
+  &__icon{
+    font-size: 2rem;
+  }
+}

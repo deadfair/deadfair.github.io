@@ -1,0 +1,61 @@
+@use '../../../assets/scss/landingPageConstants.scss' as c;
+
+$iconwidth:1.6rem;
+$primaryColor:c.$primaryColorLandingPage;
+$secondaryColor:c.$secondaryColorLandingPage;
+$thirdColor:c.$thirdColorLandingPage;
+$fourthColor:c.$fourthColorLandingPage;
+
+.footer{
+  @include c.line_color_bcgcolor(5rem,$thirdColor,$secondaryColor)
+}
+
+fa-icon{
+  color:$primaryColor;
+  width: $iconwidth;
+  height: 100%;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+
+a{
+  width: $iconwidth;
+}
+
+textarea{
+  resize: none;
+}
+
+.form-control{
+  border: .4rem solid $thirdColor;
+  background-color:$thirdColor;
+  border-radius:1rem;
+  color: $secondaryColor;
+  transition: all 0.5s ease;
+  &:focus{
+    border-color:$primaryColor
+  }
+}
+
+.btn{
+  @include c.btnLandingPage($primaryColor,$thirdColor);
+}
+
+.fst-italic{
+  color: $fourthColor;
+}
+
+.primarycolor{
+  color: $primaryColor;
+}
+
+
+
+
+
+
+
+

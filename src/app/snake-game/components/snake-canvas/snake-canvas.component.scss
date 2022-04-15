@@ -1,0 +1,16 @@
+.canvas{
+  box-shadow: 0 0 0.25rem 0rem darkgrey;
+}
+
+.gameover{
+  &__text{
+    user-select:none;
+    background-color:rgb(139, 2, 2);
+    color: rgb(241, 122, 122);
+    font-size: 3.5rem;
+    opacity: 0.5;
+  }
+  position: absolute;
+  top: 0;
+  left: 0;
+}

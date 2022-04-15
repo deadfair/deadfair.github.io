@@ -1,0 +1,85 @@
+<div class="body vw-100 min-vh-100">
+  <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold fs-3 mx-4" >Snake</a>
+      <button class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div  class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto ">
+          <li class="nav-item ">
+            <a  #start class="nav-link fs-5 mx-2 text-center"  (click)="onGameStateClick('start')"  role="button"
+                >Start
+              </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link fs-5 mx-2 text-center" role="button" (click)="onGameStateClick('pause')" >Pause</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link fs-5 mx-2 text-center" role="button" (click)="onGameStateClick('restart')" >Restart</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fs-5 mx-1 text-center ps-3"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+              Difficulty
+            </a>
+            <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+              <li *ngFor="let diff of difficultys"><a class="dropdown-item text-center" (click)="onDifficultyClick(diff.id)"  role="button"> {{diff.text}}</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fs-5 mx-1 text-center ps-3"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+              Mode
+            </a>
+            <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+              <li *ngFor="let mode of modes"><a class="dropdown-item text-center" (click)="onModeClick(mode.id)"  role="button"> {{mode.text}}</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main class="container">
+    <div class="row mt-md-3 title">
+      <div class="col-4 title--difficulty">
+        <h2 class="text-center  mx-0 my-3 p-0 text-white fs-1">Difficulty</h2>
+        <p class="text-center mx-0 my-3 p-0 text-white fs-2"  >{{difficulty}}</p>
+      </div>
+      <div class="col-4 title--score mt-3 mt-md-0">
+        <h2 class="text-center  m-0 p-0 text-white">Score</h2>
+        <p class="text-center m-0 p-0 text-white ">{{score}}</p>
+      </div>
+      <div class="col-4 title--mode">
+        <h2 class="text-center  mx-0 my-3 p-0 text-white fs-1">Mode</h2>
+        <p class="text-center mx-0 my-3 p-0 text-white fs-2"  >{{mode}}</p>
+      </div>
+    </div>
+    <app-snake-canvas
+      (difficultyChange)="difficultyChange($event)"
+      (scoreChange)="scoreChange($event)"
+      (modeChange)="modeChange($event)"
+      [gameClickHeandler]="gameClickHeandler"
+      [difficultyClickHeandler]="difficultyClickHeandler"
+      [modeClickHeandler]="modeClickHeandler"
+      >
+    </app-snake-canvas>
+    <div class="help row text-center fs-3 text-white mt-5">
+      <div class="col">
+        <p>Use the arrow keys to control the snake or enjoy the AI snake's dexterity.</p>
+      </div>
+    </div>
+  </main>
+</div>

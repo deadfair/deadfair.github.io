@@ -1,0 +1,61 @@
+
+<footer #footer class="footer__bcgcolor footer__color">
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <h2 class="fs-1 fw-bold ">Kapcsolat</h2>
+      <h3 class="fs-5 line fw-bold footer__line primarycolor">Elérhetőség</h3>
+    </div>
+    <div class="row">
+
+      <section class="col-sm-6">
+        <div class="my-3">
+          <h3 class="fs-4 fw-bold">Vedd fel velem a kapcsolatot.</h3>
+          <p>Ha felkeltettem az érdeklődésed, az alábbi elérhetőségeim eggyikén lépj velem kapcsolatba.</p>
+        </div>
+        <div *ngFor="let field of personFields,index as i" class="d-flex align-items-center my-3">
+          <div class="flex-shrink-0">
+            <fa-icon [icon]="icons[i]"></fa-icon>
+          </div>
+          <div class="flex-grow-1 ms-3">
+            <div>{{ field.key}}</div>
+            <div class="fst-italic">{{ field.value }}</div>
+          </div>
+        </div>
+        <div class="row my-3">
+          <a class="me-4 ms-2 p-0" href="https://www.facebook.com/krisztian.baller/" target="_blank" title="facebook link">
+            <fa-icon [icon]="icons[4]"></fa-icon>
+          </a>
+          <a class="me-4 p-0" href="https://github.com/deadfair" target="_blank" title="github link">
+            <fa-icon [icon]="icons[5]"></fa-icon>
+          </a>
+          <a class="me-4 p-0" href="https://www.linkedin.com/in/kriszti%C3%A1n-ball%C3%A9r-311270220/" target="_blank"
+            title="linkedin link">
+            <fa-icon [icon]="icons[6]"></fa-icon>
+          </a>
+        </div>
+      </section>
+
+      <section class="col-sm-6 mt-3 mt-sm-0 d-flex align-items-center">
+        <form class="row g-3 ">
+          <h3 class="fs-4 fw-bold">Üzenj nekem</h3>
+          <div class="col-md-6">
+            <input type="text" name="name" class="form-control" placeholder="Név">
+          </div>
+          <div class="col-md-6">
+            <input type="email" name="email" class="form-control" placeholder="Email">
+          </div>
+          <div class="col-12">
+            <input type="text" class="form-control" name="subject" placeholder="Tárgy">
+          </div>
+
+          <div class="col-12">
+            <textarea class="form-control" rows="3" name="message" placeholder="Üzenet..."></textarea>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary disabled">Küldés</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,34 @@
+// AI kígyó:
+// amíg kigyó.length <=Min(width,height) =>legrövidebb út , csak ne menjünk a farokba
+
+//sokadik lépés: => aztán mindig annyi helyet hagyunk a szélén amennyiszer a kígyó kiteszi a Min(width,height)
+
+// vissza számláló, idő számláló
+
+// mode helyett lvl, alatta a lvl neve =>
+// lvl szintek: bomba, fal, időre x kaja, idő gyorsuló
+// végtelen kigyó, ~kb 20 at kelljen összszedni
+
+
+//                -
+// ----------------
+// aiSnake(apple,width,height)
+// evés utánvalculáljuk az irányt
+// ha az alma amerre néz van => irányt tarjuk
+// ha ellentétes akkor 2 opció van vagy jobb ra v bnalra, arra kell kanyarodni amere
+// amelyik felen kevesebb a farokrész
+
+// landing-page , új név=> portfolio-page
+
+
+
+
+
+
+
+
+
+
+
+kérdések: ha vannak config filejaim akkor abból vehetem az értékeket vagy mindne komponens csináljon egy újat,
+vis kopizza ki és másolja le magának és azzal dolgozzon?
